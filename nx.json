@@ -75,8 +75,12 @@
       },
       "library": {
         "style": "none",
-        "linter": "eslint"
+        "linter": "eslint",
+        "unitTestRunner": "none"
       }
     }
+  },
+  "sync": {
+    "applyChanges": false
   }
 }
