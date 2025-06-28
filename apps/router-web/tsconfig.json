@@ -16,7 +16,7 @@
     "types": ["@react-router/node"],
     "baseUrl": ".",
     "paths": {
-      "@/*": ["../../packages/ui/src/*"]
+      "@rr/ui/*": ["../../packages/ui/src/*"]
     }
   }
 }
