@@ -8,7 +8,6 @@ import {
   type LinksFunction,
 } from 'react-router';
 
-import { AppNav } from './app-nav';
 import './app.css';
 
 export const meta: MetaFunction = () => [
@@ -40,7 +39,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <AppNav />
         {children}
         <ScrollRestoration />
         <Scripts />
