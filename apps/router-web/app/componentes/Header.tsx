@@ -34,7 +34,7 @@ export function Header() {
 
   return (
     <div>
-      <Breadcrumb>
+      <Breadcrumb className='bg-white py-2'>
         <BreadcrumbList>
           {accumulatedPaths.map((path, index) => {
             const isLast = index === accumulatedPaths.length - 1;
