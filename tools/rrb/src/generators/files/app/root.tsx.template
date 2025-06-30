@@ -53,7 +53,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Meta />
         <Links />
       </head>
-      <body className="bg-[url('https://thumbs.dreamstime.com/b/white-shaded-abstract-geometric-pattern-origami-paper-style-d-rendering-background-98389511.jpg')] bg-repeat bg-center h-screen">
+      <body>
         {children}
         <ScrollRestoration />
         <Toaster />
@@ -65,7 +65,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
 export default function App() {
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div className="bg-[url('https://thumbs.dreamstime.com/b/white-shaded-abstract-geometric-pattern-origami-paper-style-d-rendering-background-98389511.jpg')] bg-repeat bg-center h-screen flex items-center justify-center min-h-screen">
       <Card className="bg-white/70 backdrop-blur-xs w-200">
         <CardHeader>
           <CardTitle>
