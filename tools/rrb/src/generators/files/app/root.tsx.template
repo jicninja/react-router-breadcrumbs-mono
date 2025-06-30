@@ -1,3 +1,5 @@
+import './app.css';
+
 import {
   Links,
   Meta,
@@ -8,13 +10,9 @@ import {
   type LinksFunction,
 } from 'react-router';
 
-import { Header } from './componentes/Header';
 import {
   Toaster,
   H1,
-  H2,
-  H4,
-  Muted,
   Card,
   CardTitle,
   CardHeader,
@@ -22,8 +20,8 @@ import {
   CardFooter,
 } from '@rr/ui';
 
-import './app.css';
 import { Footer } from './componentes/Footer';
+import { Header } from './componentes/Header';
 
 export const meta: MetaFunction = () => [
   {
@@ -56,8 +54,8 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         {children}
         <ScrollRestoration />
-        <Toaster />
         <Scripts />
+        <Toaster />
       </body>
     </html>
   );
@@ -74,24 +72,6 @@ export default function App() {
           <Header />
         </CardHeader>
         <CardContent>
-          <Card className='bg-white/10 backdrop-blur-lg'>
-            <CardContent>
-            <Muted>
-              Not sure what to put here, so let’s just go over how to make
-              polenta
-            </Muted>
-            <H2 className='text-lg'>Easy Polenta in 3 Steps</H2>
-            <H4 className="my-3 text-md">Ingredients:</H4>
-            <ul className="list-disc list-inside space-y-2">
-              <li className='text-sm'>1 cup cornmeal (polenta)</li>
-              <li className='text-sm'>4 cups water (or broth for more flavor)</li>
-              <li className='text-sm'>Salt to taste</li>
-              <li className='text-sm'>2 tbsp butter or olive oil (optional)</li>
-              <li className='text-sm'>Grated cheese (optional)</li>
-            </ul>
-            </CardContent>
-          </Card>
-
           <Outlet />
         </CardContent>
         <CardFooter>

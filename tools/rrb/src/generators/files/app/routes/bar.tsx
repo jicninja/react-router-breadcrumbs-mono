@@ -3,12 +3,10 @@ import { H2, P } from '@rr/ui';
 export default function BarComponent() {
   return (
     <>
-      <H2 className="mt-3"> Step 2 - Cook the Polenta:</H2>
+      <H2 className="mt-3"> Step 2 - Review the code:</H2>
       <P>
-        Slowly whisk in the cornmeal to avoid lumps.
-        <br />
-        Reduce heat to low and cook, stirring constantly, for about 5–15
-        minutes until thick and creamy.
+        Take a look at the code and make sure it's working correctly. It
+        shouldn’t interfere with other apps
       </P>
     </>
   );

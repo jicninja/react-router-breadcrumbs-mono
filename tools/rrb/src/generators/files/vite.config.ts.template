@@ -1,7 +1,7 @@
 /// <reference types='vitest' />
 import { defineConfig } from 'vite';
 import { reactRouter } from '@react-router/dev/vite';
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig(() => ({
   root: __dirname,
@@ -13,6 +13,21 @@ export default defineConfig(() => ({
   preview: {
     port: 4200,
     host: 'localhost',
+  },
+  optimizeDeps: {
+    include: [
+      'sonner',
+      'lucide-react',
+      'zustand',
+      'zustand/middleware',
+      'clsx',
+      'tailwind-merge',
+      '@radix-ui/react-slot',
+      'class-variance-authority',
+      'next-themes',
+      '@react-router/dev/routes',
+      'axios',
+    ],
   },
   plugins: [tailwindcss(), !process.env.VITEST && reactRouter()],
   // Uncomment this if you are using workers.
