@@ -11,10 +11,10 @@ export async function rrbGenGenerator(
   tree: Tree,
   options: RrbGenGeneratorSchema
 ) {
-  const projectRoot = `libs/${options.name}`;
+  const projectRoot = `apps/${options.name}`;
   addProjectConfiguration(tree, options.name, {
     root: projectRoot,
-    projectType: 'library',
+    projectType: 'application',
     sourceRoot: `${projectRoot}/src`,
     targets: {},
   });
