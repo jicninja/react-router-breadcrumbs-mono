@@ -1,6 +1,7 @@
 import {
   addProjectConfiguration,
   formatFiles,
+  installPackagesTask,
   generateFiles,
   Tree,
 } from '@nx/devkit';
@@ -20,6 +21,9 @@ export async function rrbGenGenerator(
   });
   generateFiles(tree, path.join(__dirname, 'files'), projectRoot, options);
   await formatFiles(tree);
+  return () => {
+    installPackagesTask(tree);
+  };
 }
 
 export default rrbGenGenerator;
