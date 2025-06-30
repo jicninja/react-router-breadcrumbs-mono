@@ -27,7 +27,7 @@ import { Footer } from './componentes/Footer';
 
 export const meta: MetaFunction = () => [
   {
-    title: 'New Nx React Router App',
+    title: 'React Router v7 Breadcrumbs',
   },
 ];
 
