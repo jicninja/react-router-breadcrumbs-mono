@@ -1,5 +1,5 @@
 {
-  "name": "@rr/router-web",
+  "name": "@rr/<%= name %>",
   "private": true,
   "type": "module",
   "scripts": {},
