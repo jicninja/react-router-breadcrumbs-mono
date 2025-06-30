@@ -14,6 +14,21 @@ export default defineConfig(() => ({
     port: 4200,
     host: 'localhost',
   },
+    optimizeDeps: {
+    include: [
+      'sonner',
+      'lucide-react',
+      'zustand',
+      'zustand/middleware',
+      'clsx',
+      'tailwind-merge',
+      '@radix-ui/react-slot',
+      'class-variance-authority',
+      'next-themes',
+      '@react-router/dev/routes',
+      'axios',
+    ],
+  },
   plugins: [tailwindcss(), !process.env.VITEST && reactRouter()],
   // Uncomment this if you are using workers.
   // worker: {

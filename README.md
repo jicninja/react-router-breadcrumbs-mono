@@ -1,6 +1,5 @@
 # Nx Monorepo for React Router 7 Apps
 
-
 This repository is an Nx monorepo designed for building applications with **React Router 7**. It provides a robust structure for both frontend and backend development, along with shared libraries and a design system.
 
 ## Demo
@@ -27,32 +26,37 @@ This repository is an Nx monorepo designed for building applications with **Reac
 ## Getting Started
 
 1. **Install dependencies:**
-    ```sh
-    npm install
-    ```
+
+   ```sh
+   npm install
+   ```
 
 2. **Start a frontend app:**
-    ```sh
-    npx nx dev router-web
-    ```
-    Or, for any app:
-    ```sh
-    npx nx dev {appName}
-    ```
+
+   ```sh
+   npx nx dev router-web
+   ```
+
+   Or, for any app:
+
+   ```sh
+   npx nx dev {appName}
+   ```
 
 3. **Start the backend:**
-    ```sh
-    npx nx serve backend
-    ```
+
+   ```sh
+   npx nx serve backend
+   ```
 
 4. **Generate a new React Router app:**
-    ```sh
-    npx nx g @rr/rrb:rrb-gen appName
-    ```
-    Then start it:
-    ```sh
-    npx nx dev appName
-    ```
+   ```sh
+   npx nx g @rr/rrb:rrb-gen appName
+   ```
+   Then start it:
+   ```sh
+   npx nx dev appName
+   ```
 
 ## Design System & Tailwind
 
