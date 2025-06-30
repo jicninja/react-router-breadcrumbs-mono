@@ -1,8 +1,10 @@
-import { useLabelStore } from '../store/useLabelStore';
-import { generateLabels } from '@rr/shared';
 import { useState } from 'react';
-import { fetchLabels } from '../services/fetchlabels';
+import { generateLabels } from '@rr/shared';
+import { Button } from '@rr/ui';
 import { toast } from 'sonner';
+import { Loader2Icon } from 'lucide-react';
+import { useLabelStore } from '../store/useLabelStore';
+import { fetchLabels } from '../services/fetchlabels';
 
 export function NewLabelsButtons() {
   const setLabels = useLabelStore((state) => state.setLabels);
@@ -25,11 +27,13 @@ export function NewLabelsButtons() {
   };
 
   return (
-    <>
-      <button onClick={handleNewLocalsLabels}>New Locals Labels</button>
-      <button onClick={handleFetchLabels}>
-        {isLoading ? 'loading' : 'Fetch Labels'}
-      </button>
-    </>
+    <div className="flex gap-2">
+      <Button  variant="outline" disabled={isLoading} onClick={handleNewLocalsLabels}>
+        New Locals Labels
+      </Button>
+      <Button  disabled={isLoading} onClick={handleFetchLabels}>
+        {isLoading ? <Loader2Icon className="animate-spin" /> : 'Fetch Labels'}
+      </Button>
+    </div>
   );
 }

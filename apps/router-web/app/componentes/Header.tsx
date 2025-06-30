@@ -43,12 +43,13 @@ export function Header() {
               <Fragment key={path}>
                 <BreadcrumbItem>
                   {isLast ? (
-                    <BreadcrumbPage>
+                    <BreadcrumbPage className="capitalize">
                       {labels[index] ?? decodeURIComponent(path)}
                     </BreadcrumbPage>
                   ) : (
                     <BreadcrumbLink
                       href={path}
+                      className="capitalize"
                       onClick={(event) => {
                         handleNavigation(event, path);
                       }}
