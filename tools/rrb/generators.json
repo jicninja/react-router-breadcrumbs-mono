@@ -1,0 +1,9 @@
+{
+  "generators": {
+    "rrb-gen": {
+      "factory": "./dist/generators/rrb-gen",
+      "schema": "./dist/generators/schema.json",
+      "description": "rrb-gen generator"
+    }
+  }
+}

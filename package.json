@@ -59,9 +59,11 @@
   },
   "workspaces": [
     "packages/*",
-    "apps/*"
+    "apps/*",
+    "tools/*"
   ],
   "dependencies": {
+    "@nx/devkit": "21.2.1",
     "@nx/plugin": "^21.2.1",
     "@react-router/node": "^7.2.0",
     "@react-router/serve": "^7.2.0",
