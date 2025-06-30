@@ -7,9 +7,14 @@ This repository is an Nx monorepo designed for building applications with **Reac
 
 ### Preview
 
-[![Watch the demo](https://cdn.loom.com/sessions/thumbnails/0852a59123c346a7a8686e2a40065a25-with-play.gif)](https://www.loom.com/share/0852a59123c346a7a8686e2a40065a25?sid=5d9f47ec-c716-402f-8e49-c06283e6f38f)
-
-[Watch on Loom](https://www.loom.com/share/0852a59123c346a7a8686e2a40065a25?sid=5d9f47ec-c716-402f-8e49-c06283e6f38f)
+<div>
+<a href="https://www.loom.com/share/0852a59123c346a7a8686e2a40065a25">
+  <p>React Router NX - Watch Video</p>
+</a>
+<a href="https://www.loom.com/share/0852a59123c346a7a8686e2a40065a25">
+  <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/0852a59123c346a7a8686e2a40065a25-973fd42d05a0d98f-full-play.gif">
+</a>
+</div>
 
 ## Features
 
