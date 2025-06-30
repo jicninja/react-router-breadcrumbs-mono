@@ -7,10 +7,14 @@ import {
   BreadcrumbSeparator,
 } from '@rr/ui';
 
-import { Fragment } from 'react';
-import { useLocation } from 'react-router';
+import { Fragment, MouseEvent } from 'react';
+import { useLocation, useNavigate } from 'react-router';
+import { useLabelStore } from '../store/useLabelStore';
 
 export function Header() {
+  const labels = useLabelStore((state) => state.labels);
+  const navigate = useNavigate();
+
   const location = useLocation();
   const pathSegments = location.pathname
     .split('/')
@@ -20,21 +24,37 @@ export function Header() {
     return '/' + array.slice(0, index + 1).join('/');
   });
 
+  const handleNavigation = (
+    event: MouseEvent<HTMLAnchorElement>,
+    route: string
+  ) => {
+    event.preventDefault();
+    navigate(route);
+  };
+
   return (
     <div>
       <Breadcrumb>
         <BreadcrumbList>
           {accumulatedPaths.map((path, index) => {
             const isLast = index === accumulatedPaths.length - 1;
-            const label = decodeURIComponent(pathSegments[index]);
 
             return (
               <Fragment key={path}>
                 <BreadcrumbItem>
                   {isLast ? (
-                    <BreadcrumbPage>{label}</BreadcrumbPage>
+                    <BreadcrumbPage>
+                      {labels[index] ?? decodeURIComponent(path)}
+                    </BreadcrumbPage>
                   ) : (
-                    <BreadcrumbLink href={path}>{label}</BreadcrumbLink>
+                    <BreadcrumbLink
+                      href={path}
+                      onClick={(event) => {
+                        handleNavigation(event, path);
+                      }}
+                    >
+                      {labels[index] ?? decodeURIComponent(path)}
+                    </BreadcrumbLink>
                   )}
                 </BreadcrumbItem>
                 {!isLast && <BreadcrumbSeparator />}
