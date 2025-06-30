@@ -1,7 +1,3 @@
 export default function BazComponent() {
-  return (
-    <div>
-      <h1>Baz</h1>
-    </div>
-  );
+  return <div>Baz content here!</div>;
 }

@@ -8,7 +8,10 @@ import {
   type LinksFunction,
 } from 'react-router';
 
+import { Header } from './componentes/Header';
+
 import './app.css';
+import { Footer } from './componentes/Footer';
 
 export const meta: MetaFunction = () => [
   {
@@ -39,7 +42,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
+        <Header />
         {children}
+        <Footer />
         <ScrollRestoration />
         <Scripts />
       </body>
