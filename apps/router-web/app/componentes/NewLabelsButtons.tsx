@@ -2,6 +2,7 @@ import { useLabelStore } from '../store/useLabelStore';
 import { generateLabels } from '@rr/shared';
 import { useState } from 'react';
 import { fetchLabels } from '../services/fetchlabels';
+import { toast } from 'sonner';
 
 export function NewLabelsButtons() {
   const setLabels = useLabelStore((state) => state.setLabels);
@@ -17,8 +18,7 @@ export function NewLabelsButtons() {
       const { labels } = await fetchLabels();
       setLabels(labels);
     } catch (error) {
-            console.log('entro aca', error);
-
+      toast('Somethign went wrong, please try again later');
     } finally {
       setIsLoading(false);
     }

@@ -9,6 +9,8 @@ import {
 } from 'react-router';
 
 import { Header } from './componentes/Header';
+import { Toaster } from "@rr/ui"
+
 
 import './app.css';
 import { Footer } from './componentes/Footer';
@@ -44,6 +46,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       <body>
         {children}
         <ScrollRestoration />
+        <Toaster />
         <Scripts />
       </body>
     </html>
