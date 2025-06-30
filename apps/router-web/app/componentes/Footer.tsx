@@ -1,5 +1,5 @@
 import { useNextPrevRoutes } from '../hooks/useNextPrevRoutes';
-import { NewLabelButton } from './NewLabelsButton';
+import { NewLabelsButtons } from './NewLabelsButtons';
 import { Link } from 'react-router';
 
 export function Footer() {
@@ -12,7 +12,7 @@ export function Footer() {
       ) : (
         <span className="text-muted-foreground ">Prev</span>
       )}
-      <NewLabelButton></NewLabelButton>
+      <NewLabelsButtons />
       {next ? (
         <Link to={next}>Next</Link>
       ) : (
