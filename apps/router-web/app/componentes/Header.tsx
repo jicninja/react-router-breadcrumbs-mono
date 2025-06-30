@@ -8,30 +8,33 @@ import {
 } from '@rr/ui';
 
 import { Fragment } from 'react';
-
-import { useMatches } from 'react-router';
+import { useLocation } from 'react-router';
 
 export function Header() {
-  const matches = useMatches();
+  const location = useLocation();
+  const pathSegments = location.pathname
+    .split('/')
+    .filter((segment) => segment);
 
-  const rutasVisibles = matches.filter((match) => match.pathname !== '/');
+  const accumulatedPaths = pathSegments.map((_, index, array) => {
+    return '/' + array.slice(0, index + 1).join('/');
+  });
 
   return (
     <div>
       <Breadcrumb>
         <BreadcrumbList>
-          {rutasVisibles.map((match, index) => {
-            const isLast = index === rutasVisibles.length - 1;
+          {accumulatedPaths.map((path, index) => {
+            const isLast = index === accumulatedPaths.length - 1;
+            const label = decodeURIComponent(pathSegments[index]);
 
             return (
-              <Fragment key={match.pathname}>
+              <Fragment key={path}>
                 <BreadcrumbItem>
                   {isLast ? (
-                    <BreadcrumbPage>Label Here {index}</BreadcrumbPage>
+                    <BreadcrumbPage>{label}</BreadcrumbPage>
                   ) : (
-                    <BreadcrumbLink href={match.pathname}>
-                      Label Here {index}
-                    </BreadcrumbLink>
+                    <BreadcrumbLink href={path}>{label}</BreadcrumbLink>
                   )}
                 </BreadcrumbItem>
                 {!isLast && <BreadcrumbSeparator />}

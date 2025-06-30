@@ -25,7 +25,7 @@ export default function handleRequest(
     let shellRendered = false;
     const userAgent = request.headers.get('user-agent');
 
-    // Add Redirection to foo as default
+    // Add Redirection to foo as home
     const url = new URL(request.url);
     if (url.pathname === '/') {
       responseHeaders.set('Location', '/foo');
